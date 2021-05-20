@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="somemodule">
+<head>
+<meta charset="ISO-8859-1">
+<title>Online Flight Booking System</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="module3.js"></script>
+<style>
+		.button {
+		  background-color: #4CAF50;
+		  border: none;
+		  color: white;
+		  padding: 5px 12px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  cursor: pointer;
+		}
+		.button1 {
+		  background-color: white; 
+		  color: black; 
+		  border: 2px solid #008CBA;
+		}
+		
+		.button1:hover {
+		  background-color: #008CBA;
+		  color: white;
+		}
+		.button2 {
+		  background-color: white;
+		  color: black;
+		  border: 2px solid #555555;
+		}
+		
+		.button2:hover {
+		  background-color: #555555;
+		  color: white;
+		}
+</style>
+</head>
+<body>
+<h1 style="color:blue;margin-left:400px;">Welcome to Online Flight Booking System</h1>
+<div ng-controller="modulectrl as mc">
+
+<div ng-show="mc.showadmin">
+<a href="adminconfirm.jsp" style="margin-left:650px;" class="button button2">Admin Signup</a><br/>
+<a href="adminlogin.jsp" style="margin-left:650px;" class="button button2">Admin Login</a><br/>
+</div>
+
+<div ng-show="mc.showuser">
+<a href="usersignin.jsp" style="margin-left:650px;" class="button button2">User Signup</a><br/>
+<a href="userlogin.jsp" style="margin-left:650px;" class="button button2">User Login</a>
+</div>
+<button ng-click="mc.admin()" style="margin-left:400px;" class="button button1">Admin</button>
+<button ng-click="mc.user()" style="margin-left:460px;" class="button button1">User</button>
+</div>
+</body>
+</html>
